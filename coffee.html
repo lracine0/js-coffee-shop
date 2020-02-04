@@ -55,11 +55,13 @@ import jquery;
 <script>
 
     // Set these variables to their DOM elements
+    const drinksOrdered = [];
 
     const coffeeImage = $('#coffee-image');
     const revenueMessage = 'replace me';
 
-    coffeeImage.attr('src', 'static/coffee_beans.jpg');
+    // coffeeImage.attr('src', 'static/coffee_beans.jpg');
+  
 
     coffeeImage.on('click', () => {
         coffeeImage.attr('src', 'static/coffee_machine.jpg');
@@ -70,9 +72,16 @@ import jquery;
     coffeeImage.attr('src', 'static/coffee_mug.jpg');
     setTimeout(changeImage2, 2500);
     };
+
     const changeImage2 = () => {
+        //drinksOrdered.add(drinkType);
         coffeeImage.attr('src', 'static/coffee_beans.jpg');
     }
+
+    // const makeCoffee = (drinkType) =>{
+        
+    // }
+
 
     const prices = {
         "brew": 2.05,
