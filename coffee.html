@@ -55,9 +55,17 @@
 
     coffeeImage.addEventListener('click', () => {
         coffeeImage.setAttribute('src', 'static/coffee_machine.jpg');
-        setTimeout(1500);
-        //coffeeImage.setAttribute('src', 'static/coffee_mug.jpg');
+        setTimeout(changeImage, 1500);
+        
     });
+
+    const changeImage = () => {
+    coffeeImage.setAttribute('src', 'static/coffee_mug.jpg');
+    setTimeout(changeImage2, 2500);
+    };
+    const changeImage2 = () => {
+        coffeeImage.setAttribute('src', 'static/coffee_beans.jpg');
+    }
 
     const prices = {
         "brew": 2.05,
